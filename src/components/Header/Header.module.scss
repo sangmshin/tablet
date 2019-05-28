@@ -1,0 +1,23 @@
+@import 'styles/variables.scss';
+
+header {
+
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+  .header_wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .tablet_logo {
+      width: 150px;
+      height: 100%;
+    }
+
+    .fav_button {
+      color: $red;
+      text-decoration: underline
+    }
+  }
+}

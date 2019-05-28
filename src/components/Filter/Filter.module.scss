@@ -1,0 +1,30 @@
+@import 'styles/variables.scss';
+
+.filter_toggle {
+  padding-top: 30px;
+  display: flex;
+  justify-content: space-between;
+
+  p {
+    &:first-child {
+      cursor: pointer;
+      color: black;
+    }
+
+    &:nth-child(2) {
+      color: $orange;
+    }
+  }
+}
+.hide{
+  display: none;
+}
+.criteria{
+  padding-top: 20px;
+}
+
+.checkboxes {
+  input, label {
+    cursor: pointer;
+  }
+}

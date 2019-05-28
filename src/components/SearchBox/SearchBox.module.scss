@@ -1,0 +1,43 @@
+@import 'styles/variables.scss';
+@import 'styles/mixins.scss';
+
+
+form {
+  
+  text-align: center;
+
+  legend {
+    font-size: 45px;
+    @include bp($tablet){
+      font-size: 30px;
+    }
+    @include bp($mobile){
+      font-size: 10px;
+    }
+
+  }
+
+  input {
+    width: 100%;
+    // background: transparent;
+    border-top: transparent !important;
+    border-left: transparent !important;
+    border-right: transparent !important;
+    border-bottom: black 1px solid !important;
+    color: $orange;
+    font-size: 40px;
+    padding-left: 0;
+    text-align: center;
+    margin: auto 0;
+  }
+
+  input:focus {
+    outline: none;
+  }
+}
+
+// @media (max-width:600px){
+//   legend{
+//     font-size: 30px !important;
+//   }
+// }

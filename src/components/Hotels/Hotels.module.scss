@@ -1,0 +1,93 @@
+@import 'styles/mixins.scss';
+@import 'styles/variables.scss';
+
+
+.cards {
+  margin-top: 40px;
+
+  .card {
+    margin-bottom: 40px;
+
+    // HOTEL IMAGE
+    .card_wrapper {
+
+      position: relative;
+
+      .hotelImg {
+        opacity: .5;
+      }
+
+      .heart {
+        position: absolute;
+        right: 0px;
+        top: 10px;
+        cursor: pointer;
+      }
+
+      .hotel_name {
+        position: absolute;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+        top: 0px;
+        padding: 10px;
+
+        h1 {
+          font-weight: bold;
+
+          @include bp($desktop) {
+            font-size: 20px;
+          }
+
+          @include bp(575px) {
+            font-size: 30px;
+          }
+        }
+      }
+
+    }
+
+    
+    // CAPTION
+    .detail_wrapper {
+      margin: 0px;
+      border-bottom: 1px grey solid;
+      border-left: 1px grey solid;
+      border-right: 1px grey solid;
+      padding: 10px;
+      position: relative;
+      background-color: white;
+
+      .criteria {
+        padding-left: 10px;
+        margin-bottom: 0px;
+
+        &::before {
+          content: "•";
+          position: absolute;
+          left: 10px;
+        }
+      }
+    }
+
+    .zeroHeight{
+      height:50%;
+      @include bp(575px) {
+        margin-bottom: 45px;
+      }
+    }
+    .fullHeight{
+      position: absolute;
+      border-top:1px solid grey; 
+      width: calc(100% - 30px);
+      height: 50%;
+      bottom: 0px;
+      left:0;
+      margin-left: 15px;
+    }
+  }
+}
+

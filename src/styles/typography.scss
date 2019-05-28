@@ -1,0 +1,30 @@
+@font-face {
+  font-family: 'AvenirNext-Bold';
+  src: url('./fonts/AvenirNext/AvenirNext-Bold.eot');
+  src: url('./fonts/AvenirNext/AvenirNext-Bold.woff2') format('woff2'),
+       url('./fonts/AvenirNext/AvenirNext-Bold.woff') format('woff'),
+       url('./fonts/AvenirNext/AvenirNext-Bold.ttf') format('truetype'),
+       url('./fonts/AvenirNext/AvenirNext-Bold.svg#AvenirNext-Bold') format('svg'),
+       url('./fonts/AvenirNext/AvenirNext-Bold.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'AvenirNext-Regular';
+  src: url('./fonts/AvenirNext/AvenirNext-Regular.eot');
+  src: url('./fonts/AvenirNext/AvenirNext-Regular.woff2') format('woff2'),
+       url('./fonts/AvenirNext/AvenirNext-Regular.woff') format('woff'),
+       url('./fonts/AvenirNext/AvenirNext-Regular.ttf') format('truetype'),
+       url('./fonts/AvenirNext/AvenirNext-Regular.svg#AvenirNext-Regular') format('svg'),
+       url('./fonts/AvenirNext/AvenirNext-Regular.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+.App {
+  font-family: "AvenirNext-Regular", "Helvetica Neue", HelveticaNeue, Helvetica, Arial, sans-serif;
+}
+
+

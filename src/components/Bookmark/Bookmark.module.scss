@@ -1,0 +1,35 @@
+@import 'styles/variables.scss';
+
+.bookmark_ul {
+  list-style: none;
+  margin-top: 30px;
+  li{
+    text-decoration: underline;
+
+    &::before {
+      content: "\2022";
+      color: $orange;
+      font-weight: bold;
+      display: inline-block;
+      width: 1em;
+      margin-left: -1em;
+
+    }
+    .fav_link {
+      font-size: 20px;
+      color: $orange;
+      margin-right: 20px;
+    }
+    .remove_btn{
+      background-color: white;
+      color: black;
+      padding: 0 10px;
+      border: 1px grey solid;
+
+      &:hover, &:active {
+        background-color: black;
+        color: white;
+      }
+    }
+  }
+}

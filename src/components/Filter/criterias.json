@@ -1,0 +1,20 @@
+[
+  {
+    "name": "atmosphere",
+    "types": [
+      "Happening",
+      "Lively",
+      "Quiet",
+      "Secluded"
+    ]
+  },
+  {
+    "name": "style",
+    "types": [
+      "Contemporary Classic",
+      "Cutting-Edge",
+      "Modern Design",
+      "Traditional Elegance"
+    ]
+  }
+]

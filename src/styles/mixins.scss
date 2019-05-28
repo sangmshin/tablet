@@ -1,0 +1,6 @@
+
+@mixin bp($device){
+  @media (max-width: $device) {
+    @content;
+  }
+}

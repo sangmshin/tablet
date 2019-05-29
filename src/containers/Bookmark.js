@@ -5,7 +5,8 @@ import { unbookmarkAction } from 'actions/bookmarkAction';
 import PropTypes from "prop-types";
 import { BookmarkItem } from 'components/Bookmark';
 import { Container } from 'react-bootstrap';
-import LocalStorageService from "utils/LocalStorageService";
+import style from 'components/Bookmark/Bookmark.module.scss';
+import LocalStorageService from "utils/localStorageService";
 
 const Bookmark = ({ hotels, unbookmark }) => {
 
@@ -19,7 +20,7 @@ const Bookmark = ({ hotels, unbookmark }) => {
   return (
   <section>
     <Container>
-      <h1 style={{textAlign:"center"}}>My Favorite Hotels</h1>
+      <h1 className={style.title}>My Favorite Hotels</h1>
       {
         hotels.data 
         && hotels.data.hotels.filter(({ _source }) => _source.bookmarked ).map(({ _id, _source }, i ) => 

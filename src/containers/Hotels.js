@@ -6,7 +6,7 @@ import PropTypes from "prop-types";
 import { Container, Row } from 'react-bootstrap';
 import { HotelCard } from 'components/Hotels';
 import style from 'components/Hotels/Hotels.module.scss';
-import LocalStorageService from "utils/LocalStorageService";
+import LocalStorageService from "utils/localStorageService";
 
 const Hotels = ({ hotels, bookmark, unbookmark }) => {
 

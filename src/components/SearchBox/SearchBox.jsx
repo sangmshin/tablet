@@ -6,7 +6,8 @@ import PropTypes from 'prop-types';
 const SearchBox = memo( ({ search }) => {
   const [ inputValue, setValue ] = useState('')
   const changeInput = e => setValue(e.target.value)
-  const keyDown = e => e.keyCode === 13 && search(inputValue)
+  const keyDown = e => inputValue && e.keyCode === 13 && search(inputValue)
+
   let textInput = React.createRef();
   useEffect(() => textInput.current.focus());
   
@@ -23,6 +24,13 @@ const SearchBox = memo( ({ search }) => {
             id="" 
             type="text" 
             name="location" 
+          />
+          <input 
+            onClick={()=> inputValue && search(inputValue)} 
+            disabled={inputValue ? false : true}
+            className="d-sm-none" 
+            type="submit" 
+            value="SEARCH"
           />
         </form>
       </Container>

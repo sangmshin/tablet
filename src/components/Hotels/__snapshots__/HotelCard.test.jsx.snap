@@ -1,0 +1,122 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<Col
+  as="div"
+  className="card"
+  lg={4}
+  md={4}
+  onMouseOut={[Function]}
+  onMouseOver={[Function]}
+  sm={6}
+  xl={4}
+  xs={12}
+>
+  <div
+    className="card_wrapper"
+  >
+    <Bootstrap(Image)
+      alt="Hotel Image"
+      className="hotelImg"
+      fluid={true}
+    />
+    <div
+      className="hotel_name"
+    >
+      <h1 />
+    </div>
+    <Bootstrap(Image)
+      className="heart"
+      src="heart-unselected.svg"
+      width="40px"
+    />
+  </div>
+  <div>
+    <Bootstrap(Row)
+      className="detail_wrapper"
+    >
+      <Caption
+        type="lively"
+        visible={true}
+      />
+      <Caption
+        type="modern"
+        visible={true}
+      />
+      <Caption
+        key="0"
+        type="bergen rd."
+        visible={false}
+      />
+      <Caption
+        key="1"
+        type="gym"
+        visible={false}
+      />
+      <Caption
+        key="2"
+        type="9173276941"
+        visible={false}
+      />
+    </Bootstrap(Row)>
+  </div>
+</Col>
+`;
+
+exports[`renders correctly 2 1`] = `
+<div
+  class="card col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12"
+>
+  <div
+    class="card_wrapper"
+  >
+    <img
+      alt="Hotel Image"
+      class="hotelImg img-fluid"
+    />
+    <div
+      class="hotel_name"
+    >
+      <h1 />
+    </div>
+    <img
+      class="heart"
+      src="heart-unselected.svg"
+      width="40px"
+    />
+  </div>
+  <div>
+    <div
+      class="detail_wrapper row"
+    >
+      <div
+        class="col-lg-6 col-md-12 col-sm-12 col-6"
+      >
+        <p
+          class="criteria"
+        >
+          lively
+        </p>
+      </div>
+      <div
+        class="col-lg-6 col-md-12 col-sm-12 col-6"
+      >
+        <p
+          class="criteria"
+        >
+          modern
+        </p>
+      </div>
+      <div
+        class="col-lg-6 col-md-12 col-sm-12 col-6"
+      />
+      <div
+        class="col-lg-6 col-md-12 col-sm-12 col-6"
+      />
+      <div
+        class="col-lg-6 col-md-12 col-sm-12 col-6"
+      />
+    </div>
+  </div>
+</div>
+`;

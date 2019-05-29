@@ -1,5 +1,12 @@
 @import 'styles/variables.scss';
+@import 'styles/mixins.scss';
 
+.title{
+  text-align: center;
+  @include bp($mobile){
+    font-size: 20px;
+  }
+}
 .bookmark_ul {
   list-style: none;
   margin-top: 30px;

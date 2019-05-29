@@ -12,7 +12,7 @@ form {
       font-size: 30px;
     }
     @include bp($mobile){
-      font-size: 10px;
+      font-size: 20px;
     }
 
   }
@@ -29,6 +29,21 @@ form {
     padding-left: 0;
     text-align: center;
     margin: auto 0;
+
+    &[type=submit]{
+      width: 100%;
+      background-color: #ff4c00;
+      border-bottom: none !important;
+      color: white;
+      font-size: 25px;
+      margin-top: 20px;
+      padding: 10px 0;
+
+      &:disabled{
+        background-color: lightgrey;
+        cursor: not-allowed
+      }
+    }
   }
 
   input:focus {
@@ -36,8 +51,3 @@ form {
   }
 }
 
-// @media (max-width:600px){
-//   legend{
-//     font-size: 30px !important;
-//   }
-// }

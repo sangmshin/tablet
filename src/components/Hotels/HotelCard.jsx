@@ -47,16 +47,33 @@ const HotelCard = memo( ({ source, bookmark, unbookmark }) => {
     }
   }
 
-  const additionalCaptions = [
-    source.address[0],
-    source.amenities[0], 
-    source.phone
+  const captionLists = [
+    {
+      type: source.criteria.atmosphere, 
+      visibility: true
+    },
+    {
+      type: source.criteria.style, 
+      visibility: true
+    },
+    {
+      type: source.address[0], 
+      visibility: isVisible
+    },
+    {
+      type: source.amenities[0], 
+      visibility: isVisible
+    }, 
+    {
+      type: source.phone, 
+      visibility: isVisible
+    }
   ]
   
   return (
     <Col xs={12} sm={6} md={4} lg={4} xl={4} 
       onMouseOver={()=> animate('up')} 
-      onMouseOut={()=> animate()} 
+      onMouseOut={()=> animate('down')} 
       className={style.card}
     >
       <div className={style.card_wrapper} ref={hotel_img}>
@@ -80,11 +97,9 @@ const HotelCard = memo( ({ source, bookmark, unbookmark }) => {
       </div>
       <div ref={caption}>
         <Row className={style.detail_wrapper}>
-          <Caption type={source.criteria.atmosphere} visible={true}/>
-          <Caption type={source.criteria.style} visible={true}/>
           {
-            additionalCaptions.map( (type, i) => 
-              <Caption type={type} visible={isVisible} key={i}/>
+            captionLists.map( ({type, visibility}, i) => 
+              <Caption type={type} visible={visibility} key={i}/>
             )
           }
         </Row>

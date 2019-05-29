@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<section>
+  <Container
+    as="div"
+    fluid={false}
+  >
+    <form
+      onSubmit={[Function]}
+    >
+      <legend>
+        Where would you like to go?
+      </legend>
+      <input
+        id=""
+        name="location"
+        onChange={[Function]}
+        onKeyDown={[Function]}
+        type="text"
+        value=""
+      />
+    </form>
+  </Container>
+</section>
+`;
+
+exports[`renders correctly 2 1`] = `
+<section>
+  <div
+    class="container"
+  >
+    <form>
+      <legend>
+        Where would you like to go?
+      </legend>
+      <input
+        id=""
+        name="location"
+        type="text"
+        value=""
+      />
+    </form>
+  </div>
+</section>
+`;

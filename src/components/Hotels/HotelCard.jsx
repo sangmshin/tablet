@@ -1,4 +1,4 @@
-import React, { memo, createRef, useState, useEffect } from 'react';
+import React, { memo, useRef, useState, useEffect } from 'react';
 import { Image, Row, Col } from 'react-bootstrap';
 import style from './Hotels.module.scss';
 import PropTypes from "prop-types";
@@ -10,10 +10,10 @@ const HotelCard = memo( ({ source, bookmark, unbookmark }) => {
   // console.log(source);
   const [ isAnimation, setAnimation ] = useState(true)
   const [ isVisible, setVisible ] = useState(false)
-  const caption = createRef();
-  const hotel_img = createRef();
+  const caption = useRef();
+  const hotel_img = useRef();
 
-  const onResize = e => {
+  const handleResize = e => {
     window.innerWidth < 992 && window.innerWidth > 575
     ? setAnimation(false)
     : setAnimation(true)
@@ -24,9 +24,9 @@ const HotelCard = memo( ({ source, bookmark, unbookmark }) => {
     window.innerWidth < 992 && window.innerWidth > 575 
     && setAnimation(false)
 
-    window.addEventListener('resize', onResize)
+    window.addEventListener('resize', handleResize)
 
-    return () => window.removeEventListener('resize', onResize)
+    return () => window.removeEventListener('resize', handleResize)
 
   }, [])
 

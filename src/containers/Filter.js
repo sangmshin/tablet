@@ -6,9 +6,9 @@ import { FilterWrapper } from 'components/Filter';
 const Filter = ({ hotels }) =>
   <>
     {
-      hotels.data &&
+      hotels.data && hotels.data.hotels.length > 0 &&
       <section>
-          <FilterWrapper hotels={hotels}/>
+        <FilterWrapper hotels={hotels}/>
       </section>
     }
   </>

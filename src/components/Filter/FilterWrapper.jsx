@@ -1,4 +1,4 @@
-import React, { useState, createRef, useEffect } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import style from './Filter.module.scss';
 import { Container, Row, Col } from 'react-bootstrap';
 import SavedHotel from './SavedHotel';
@@ -7,8 +7,8 @@ import down from './chevron-thin-down.svg';
 import FilterType from './FilterType';
 import criterias from './criterias.json';
 
-const FilterWrapper = ({ hotels }) => {
-  const filterEl = createRef()
+export default ({ hotels }) => {
+  const filterEl = useRef()
 
   const [ visible, setVisible ] = useState(false)
 
@@ -48,5 +48,3 @@ const FilterWrapper = ({ hotels }) => {
    </Container> 
   )
 }
-
-export default FilterWrapper;

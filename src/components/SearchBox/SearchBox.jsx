@@ -1,4 +1,4 @@
-import React, { useState, memo, useEffect } from 'react';
+import React, { useState, memo, useEffect, useRef } from 'react';
 import './SearchBox.module.scss';
 import { Container } from 'react-bootstrap';
 import PropTypes from 'prop-types';
@@ -8,7 +8,7 @@ const SearchBox = memo( ({ search }) => {
   const changeInput = e => setValue(e.target.value)
   const keyDown = e => inputValue && e.keyCode === 13 && search(inputValue)
 
-  let textInput = React.createRef();
+  const textInput = useRef();
   useEffect(() => textInput.current.focus());
   
   return (
@@ -27,7 +27,7 @@ const SearchBox = memo( ({ search }) => {
           />
           <input 
             onClick={()=> inputValue && search(inputValue)} 
-            disabled={inputValue ? false : true}
+            // disabled={inputValue ? false : true}
             className="d-sm-none" 
             type="submit" 
             value="SEARCH"

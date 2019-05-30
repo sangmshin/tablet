@@ -3,11 +3,9 @@ import Search from './Search';
 import Filter from './Filter';
 import Hotels from './Hotels';
 
-const Home =()=> 
+export default () => 
   <>
     <Search/>
     <Filter/>
     <Hotels/>
   </>
-
-export default Home;

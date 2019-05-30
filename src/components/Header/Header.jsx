@@ -4,7 +4,7 @@ import style from './Header.module.scss';
 import { Container } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
-const Header = () => {
+export default () => {
   const [ route, setRoute ] = useState("");
   const changeRoute = () =>  route ? setRoute("") : setRoute("bookmarked-hotels")
 
@@ -29,6 +29,3 @@ const Header = () => {
     </header>
   )
 }
-
-
-export default Header;

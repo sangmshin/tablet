@@ -5,7 +5,7 @@ import PropTypes from "prop-types";
 import { searchHotels } from 'actions/searchHotelsAction';
 import { SearchBox } from 'components/SearchBox';
 
-const Search = ({ searchHotels }) => <SearchBox search={searchHotels} />
+const Search = ({ searchHotels }) => <SearchBox search={searchHotels}/>
 
 Search.propTypes = {
   searchHotels: PropTypes.func.isRequired,
@@ -13,7 +13,7 @@ Search.propTypes = {
 
 const mapStateToProps = state => state;
 const mapDispatchToProps = dispatch => ({
-  searchHotels: bindActionCreators(searchHotels, dispatch)
+  searchHotels: bindActionCreators(searchHotels, dispatch),
 });
 
 export default connect(

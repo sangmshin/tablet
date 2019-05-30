@@ -1,6 +1,6 @@
 import React, { Component, } from 'react';
 
-class ErrorBoundary extends Component{
+export default class ErrorBoundary extends Component {
   state = {
     hasError : false
   }
@@ -15,5 +15,3 @@ class ErrorBoundary extends Component{
     ? <h1>Something went wrong. Thank you for your cooperation.</h1> 
     : this.props.children
 }
-
-export default ErrorBoundary;

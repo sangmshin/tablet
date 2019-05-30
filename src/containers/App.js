@@ -6,7 +6,7 @@ import { Header } from 'components/Header';
 import Home from './Home';
 import Bookmark from './Bookmark';
 
-const App = () =>
+export default () =>
   <div className="App">
     <Router>
       <Header/>
@@ -16,5 +16,3 @@ const App = () =>
       </Switch>  
     </Router>
   </div>
-
-export default App;

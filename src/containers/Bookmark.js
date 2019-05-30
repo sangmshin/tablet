@@ -23,7 +23,8 @@ const Bookmark = ({ hotels, unbookmark }) => {
       <h1 className={style.title}>My Favorite Hotels</h1>
       {
         hotels.data 
-        && hotels.data.hotels.filter(({ _source }) => _source.bookmarked ).map(({ _id, _source }, i ) => 
+        && hotels.data.hotels.filter(({ _source }) => _source.bookmarked )
+          .map(({ _id, _source }, i ) => 
           <BookmarkItem 
             key={i} 
             source={_source} 

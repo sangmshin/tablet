@@ -2,6 +2,7 @@ import {
   SEARCH_HOTELS_REQUEST,
   SEARCH_HOTELS_SUCCESS,
   SEARCH_HOTELS_FAILURE,
+  SEARCH_HOTELS_CANCEL,
   BOOKMARK_HOTEL,
   UNBOOKMARK_HOTEL,
   ADD_FILTER,
@@ -11,6 +12,7 @@ import {
 const initialState = {
   isLoading: false,
   error: null,
+  cancel: false
 };
 
 export default function hotelsReducer(state = initialState, { type, payload }) {
@@ -19,7 +21,8 @@ export default function hotelsReducer(state = initialState, { type, payload }) {
 
       return {
         isLoading: true,
-        error: null
+        error: null,
+        cancel: false
       };
 
     case SEARCH_HOTELS_SUCCESS:
@@ -36,11 +39,18 @@ export default function hotelsReducer(state = initialState, { type, payload }) {
         isLoading: false,
         error: payload,
       };
+
+    case SEARCH_HOTELS_CANCEL:
+
+      return {
+        data: state.data,
+        filteredItem: state.filteredItem,
+        cancel: true
+      };
     
     case BOOKMARK_HOTEL:
 
-      let selected = state.data.hotels.find(({ _id }) => _id === payload );
-      selected._source.bookmarked = true
+      state.data.hotels.find(({ _id }) => _id === payload )._source.bookmarked = true;
 
       return {
         isLoading: false,
@@ -50,8 +60,7 @@ export default function hotelsReducer(state = initialState, { type, payload }) {
 
     case UNBOOKMARK_HOTEL:
 
-      let removed = state.data.hotels.find(({ _id }) => _id === payload );
-      removed._source.bookmarked = false
+      state.data.hotels.find(({ _id }) => _id === payload )._source.bookmarked = false;
 
       return {
         isLoading: false,
@@ -60,9 +69,10 @@ export default function hotelsReducer(state = initialState, { type, payload }) {
       };
 
     case ADD_FILTER:
+      
       state.filteredItem.push(payload)
 
-      for(let payload of state.filteredItem){
+      for( let payload of state.filteredItem ){
 
         state.data.hotels
         .filter(({ _source }) => Object.values(_source.criteria).includes(payload))
@@ -84,7 +94,7 @@ export default function hotelsReducer(state = initialState, { type, payload }) {
 
       state.filteredItem.splice([state.filteredItem.indexOf(payload)], 1)
 
-      for(let payload of state.filteredItem){
+      for( let payload of state.filteredItem ){
 
         state.data.hotels
         .filter(({ _source }) => Object.values(_source.criteria).includes(payload))
